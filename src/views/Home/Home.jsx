@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StoryCard from './../../components/StoryCard';
 import { connect } from 'react-redux';
 import { getTopStories } from './../../actions/stories';
  
@@ -13,7 +14,7 @@ export default connect(state => ({
     renderStories(){
         console.log(this.props.stories);
         return this.props.stories.map((s, i) =>
-            <div key={i}>{s.title}</div>
+            <StoryCard key={i} {...s}/>
         )
     }
     render(){

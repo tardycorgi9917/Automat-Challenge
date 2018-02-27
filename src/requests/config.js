@@ -6,9 +6,9 @@ export const item = "item";
 export const user = "user";
 export const topStories = "topstories";
 
-export function generateInstance(param, id = ""){
+export function generateInstance(param){
     const instance = axios.create({
-        baseURL: apiUrl + param + id,
+        baseURL: apiUrl + param,
     });
     return instance;
 }

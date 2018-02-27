@@ -11,8 +11,9 @@ export default connect(state => ({
         this.props.getTopStories();
     }
     renderStories(){
+        console.log(this.props.stories);
         return this.props.stories.map((s, i) =>
-            <div key={i}>{s}</div>
+            <div key={i}>{s.title}</div>
         )
     }
     render(){

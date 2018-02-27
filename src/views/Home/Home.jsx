@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { getTopStories } from './../../actions/stories';
+ 
 export default connect(state => ({
     stories: state.stories.stories
-}))(class Home extends Component {
+}), {
+    getTopStories
+})(class Home extends Component {
     componentWillMount(){
-
+        this.props.getTopStories();
     }
     renderStories(){
         return this.props.stories.map((s, i) => {

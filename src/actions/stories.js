@@ -36,10 +36,16 @@ async function getCommentsForStory(story){
     });
     while(q.length > 0){
         const item = q.shift();
-
+        if(item.by in c){
+            c[item.by]++;
+        } else {
+            c[item.by] = 1;
+        }
         await getChildren(item).then( items => {
             q = q.concat(items);
         });
+
+        console.log(c);
     }
 }
 

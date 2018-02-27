@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import StoryCard from './../../components/StoryCard';
 import { connect } from 'react-redux';
 import { getTopStories } from './../../actions/stories';
+import './style.css';
  
 export default connect(state => ({
     stories: state.stories.stories
@@ -21,7 +22,9 @@ export default connect(state => ({
         return (
             <div className="home-container">
                 <h3>Top 30 hackerNews Stories</h3>
-                {this.renderStories()}
+                <div className={"story-container"}>
+                    {this.renderStories()}
+                </div>
             </div>
         )
     }

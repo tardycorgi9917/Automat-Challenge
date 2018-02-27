@@ -10,10 +10,13 @@ const StoryCard = ({
     url,
 }) =>
     <div className={"story-card-container"}>
-        <div className={'story-points'}><p>{score}</p></div>
         <div className={"story-info"}>
-            <p className={"story-title"}>{title}</p>
-            <p>{moment(time, "X").fromNow()}</p>
+            <p className={"story-author"}>by {by}</p>
+            <p className={"story-author"}>{moment(time, "X").fromNow()}</p>
+        </div>
+        <div className={"story-header"}>
+            <div className={"story-points"}><p>{score}</p></div>
+            <div className={"title-wrap"}><p className={"story-title"}>{title}</p></div>
         </div>
     </div>
 

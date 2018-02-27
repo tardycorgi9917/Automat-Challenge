@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
-import stories from './storiesReducer';
+import stories from './stories';
+
+console.log(stories);
 
 export default combineReducers({
     stories

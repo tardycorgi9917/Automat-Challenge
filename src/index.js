@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
+import { combineReducers } from 'redux';
+
 
 let store = createStore(reducers);
 

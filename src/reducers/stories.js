@@ -1,4 +1,5 @@
 import { SET_STORIES } from './../actions';
+
 const initialState = {
     stories: []
 }

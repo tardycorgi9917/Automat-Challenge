@@ -8,8 +8,10 @@ const StoryCard = ({
     time,
     title,
     url,
+    onSelect,
+    kids
 }) =>
-    <div className={"story-card-container"}>
+    <div className={"story-card-container"} onClick={() => onSelect()}>
         <div className={"story-info"}>
             <p className={"story-author"}>by {by}</p>
             <p className={"story-author"}>{moment(time, "X").fromNow()}</p>

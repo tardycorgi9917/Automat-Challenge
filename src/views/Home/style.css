@@ -4,6 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .home-container h2 {
+    color: #f39c12;
+    font-weight: bold; }
 
 .story-container {
-  width: 80%; }
+  width: 70%; }

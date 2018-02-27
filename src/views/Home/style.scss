@@ -4,7 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h2{
+        color: #f39c12;
+        font-weight: bold; 
+    }
 }
 .story-container{
-    width: 80%;
+    width: 70%;
 }

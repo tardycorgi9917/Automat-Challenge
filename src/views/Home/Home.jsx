@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import StoryCard from './../../components/StoryCard';
 import { connect } from 'react-redux';
-import { getTopStories, getChildren, getCommentsForStory } from './../../actions/stories';
+import { getTopStories, getTopCommenters } from './../../actions/stories';
 import './style.css';
  
 export default connect(state => ({
     stories: state.stories.stories
 }), {
     getTopStories,
-    getChildren
+    getTopCommenters
 })(class Home extends Component {
     componentWillMount(){
         this.props.getTopStories();
     }
     getStoryComments(story){
-       
+       this.props,getTopCommenters(story);
     }
     renderStories(){
         console.log(this.props.stories);

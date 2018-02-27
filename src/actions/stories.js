@@ -16,22 +16,30 @@ export function getTopStories(){
 }
 
 export function getChildren(item){
+    console.log(item.kids);
+    item.kids = item.kids? item.kids : [];
     return Promise.all(item.kids.map(populateItem)).then( items => items);
+}
+
+export function getTopCommenters(story){
+       getCommentsForStory(story); 
 }
 
 // really, this is a tree problem,
 // let's go ahead and use BFS and append to a makeshift
 // hashMap using JS objects
-export function getCommentsForStory(story){
+async function getCommentsForStory(story){
     let q = []; // queue for priority queue
     let c = {}; // object for commenters
-    q = q.concat(getChildren(story));
-
+    await getChildren(story).then(items => {
+        q = q.concat(items);
+    });
     while(q.length > 0){
         const item = q.shift();
 
-        q = q.concat(getChildren(item));
-        console.log(q);
+        await getChildren(item).then( items => {
+            q = q.concat(items);
+        });
     }
 }
 

@@ -15,7 +15,7 @@ const StoryCard = ({
             <p className={"story-author"}>{moment(time, "X").fromNow()}</p>
         </div>
         <div className={"story-header"}>
-            <div className={"story-points"}><p>{score}</p></div>
+            <div className={"story-points"}><p>{score}</p><span>points</span></div>
             <div className={"title-wrap"}><p className={"story-title"}>{title}</p></div>
         </div>
     </div>

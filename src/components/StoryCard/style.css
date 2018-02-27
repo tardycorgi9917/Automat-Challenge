@@ -14,9 +14,14 @@
     .story-card-container .story-header .title-wrap {
       width: 100%; }
     .story-card-container .story-header .story-points {
+      display: flex;
+      align-items: baseline;
       color: #f39c12; }
       .story-card-container .story-header .story-points p {
         font-size: 2rem; }
+      .story-card-container .story-header .story-points span {
+        padding-left: 0.5rem;
+        font-size: 0.8rem; }
     .story-card-container .story-header .story-title {
       opacity: 0.7;
       font-size: 2rem;

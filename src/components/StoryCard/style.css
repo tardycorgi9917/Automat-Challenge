@@ -1,6 +1,16 @@
-.story-card-container{
-    padding: 2rem;
-    background: white;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
+.story-card-container {
+  padding: 2rem;
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 1rem; }
+  .story-card-container .story-points {
+    color: #f39c12; }
+    .story-card-container .story-points p {
+      font-size: 2rem; }
+  .story-card-container .story-info {
+    display: flex;
+    justify-content: space-between; }
+    .story-card-container .story-info .story-title {
+      opacity: 0.7;
+      font-size: 2rem;
+      font-weight: bold; }

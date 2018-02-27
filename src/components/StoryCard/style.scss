@@ -1,0 +1,21 @@
+.story-card-container{
+    padding: 2rem;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    .story-points{
+        p{
+            font-size: 2rem;
+        }
+        color: #f39c12
+    }
+    .story-info{
+        display: flex;
+        justify-content: space-between;
+        .story-title{
+            opacity: 0.7;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+}

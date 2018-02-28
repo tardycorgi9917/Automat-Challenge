@@ -10,7 +10,7 @@ export default connect(state => ({
 })(class StoryModalContainer extends Component {
     render(){
         return(
-            <StoryModal isOpen={this.props.storyModal.isOpen}
+            <StoryModal {...this.props.storyModal}
                         onClose={this.props.closeStoryModal}/>
         )
     }

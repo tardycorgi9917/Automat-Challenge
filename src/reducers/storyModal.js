@@ -1,4 +1,4 @@
-import { OPEN_STORY_MODAL, CLOSE_STORY_MODAL } from './../actions';
+import { OPEN_STORY_MODAL, CLOSE_STORY_MODAL, SET_MODAL_STORY } from './../actions';
 
 const initialState = {
     commenters: [],
@@ -17,6 +17,11 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,
                 isOpen: false
+            }
+        case SET_MODAL_STORY:
+            return {
+                ...state,
+                story: action.story
             }
         default: return state;
     }

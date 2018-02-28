@@ -4,12 +4,12 @@ import './style.css';
 
 const StoryModal = ({
     isOpen,
-    story,
+    story: { by, title},
     commenters,
     onClose
 }) => 
     <Modal isOpen={isOpen}>
-        <div>Hello World</div>
+        <div>{title}</div>
         <button className="close-modal" onClick={onClose}>X</button>
     </Modal>
 

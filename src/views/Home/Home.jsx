@@ -3,7 +3,7 @@ import StoryCard from './../../components/StoryCard';
 import StoryModal from './../../components/StoryModal';
 import { connect } from 'react-redux';
 import { getTopStories, getTopCommenters } from './../../actions/stories';
-import { openStoryModal, closeStoryModal } from './../../actions/storyModal';
+import { openStoryModal, setModalStory } from './../../actions/storyModal';
 import './style.css';
  
 export default connect(state => ({
@@ -12,12 +12,14 @@ export default connect(state => ({
     getTopStories,
     getTopCommenters,
     openStoryModal,
+    setModalStory
 })(class Home extends Component {
     componentWillMount(){
         this.props.getTopStories();
     }
     onStorySelect(story){
         this.props.openStoryModal();
+        this.props.setModalStory(story);
         //this.props,getTopCommenters(story);
     }
     renderStories(){

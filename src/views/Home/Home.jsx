@@ -3,24 +3,27 @@ import StoryCard from './../../components/StoryCard';
 import StoryModal from './../../components/StoryModal';
 import { connect } from 'react-redux';
 import { getTopStories, getTopCommenters } from './../../actions/stories';
+import { openStoryModal, closeStoryModal } from './../../actions/storyModal';
 import './style.css';
  
 export default connect(state => ({
     stories: state.stories.stories
 }), {
     getTopStories,
-    getTopCommenters
+    getTopCommenters,
+    openStoryModal,
 })(class Home extends Component {
     componentWillMount(){
         this.props.getTopStories();
     }
-    getStoryComments(story){
-       this.props,getTopCommenters(story);
+    onStorySelect(story){
+        this.props.openStoryModal();
+        //this.props,getTopCommenters(story);
     }
     renderStories(){
         console.log(this.props.stories);
         return this.props.stories.map((s, i) =>
-            <StoryCard key={i} {...s} onSelect={() => this.getStoryComments(s)}/>
+            <StoryCard key={i} {...s} onSelect={() => this.onStorySelect(s)}/>
         )
     }
     render(){

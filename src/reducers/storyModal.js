@@ -2,7 +2,7 @@ import { OPEN_STORY_MODAL, CLOSE_STORY_MODAL } from './../actions';
 
 const initialState = {
     commenters: [],
-    isStoryModalOpen: false,
+    isOpen: false,
     story: {}
 }
 
@@ -11,12 +11,13 @@ export default (state = initialState, action = {}) => {
         case OPEN_STORY_MODAL:
             return {
                 ...state,
-                isStoryModalOpen: true
+                isOpen: true
             }
         case CLOSE_STORY_MODAL:
             return {
                 ...state,
-                isStoryModalOpen: false
+                isOpen: false
             }
+        default: return state;
     }
 }

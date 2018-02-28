@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import StoryModal from './StoryModal';
+import { closeStoryModal } from './../../actions/storyModal';
 
 export default connect(state => ({
-
-}))(class StoryModalContainer extends Component {
+    storyModal: state.storyModal
+}), {
+    closeStoryModal
+})(class StoryModalContainer extends Component {
     render(){
         return(
-            <StoryModal />
+            <StoryModal isOpen={this.props.storyModal.isOpen}
+                        onClose={this.props.closeStoryModal}/>
         )
     }
 })

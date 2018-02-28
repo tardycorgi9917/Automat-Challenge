@@ -3,12 +3,14 @@ import Modal from './../../components/Modal';
 import './style.css';
 
 const StoryModal = ({
-    showOn,
+    isOpen,
     story,
-    commenters
+    commenters,
+    onClose
 }) => 
-    <Modal showOn={true}>
+    <Modal isOpen={isOpen}>
         <div>Hello World</div>
+        <button className="close-modal" onClick={onClose}>X</button>
     </Modal>
 
 export default StoryModal;

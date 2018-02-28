@@ -3,11 +3,11 @@ import ReactModal from 'react-modal';
 import './style.css';
 
 const Modal = ({
-    showOn,
+    isOpen,
     children
 }) => 
     <ReactModal 
-        isOpen={showOn}
+        isOpen={isOpen}
         className="modal"
         overlayClassName="modal-overlay"
         shouldCloseOnOverlayClick={true}

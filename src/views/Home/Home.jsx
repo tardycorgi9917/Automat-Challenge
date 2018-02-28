@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StoryCard from './../../components/StoryCard';
+import StoryModal from './../../components/StoryModal';
 import { connect } from 'react-redux';
 import { getTopStories, getTopCommenters } from './../../actions/stories';
 import './style.css';
@@ -26,6 +27,7 @@ export default connect(state => ({
         return (
             <div className="home-container">
                 <h2>HackerNews</h2>
+                <StoryModal />
                 <div className={"story-container"}>
                     {this.renderStories()}
                 </div>

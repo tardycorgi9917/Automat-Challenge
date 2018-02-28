@@ -1,15 +1,18 @@
 import React from 'react';
+import ReactModal from 'react-modal';
+import './style.css';
 
-const Modal = props => 
+const Modal = ({
+    showOn,
+    children
+}) => 
     <ReactModal 
-        isOpen={props.showOn}
-        contentLabel="Inline Styles Modal Example"
+        isOpen={showOn}
         className="modal"
-        onAfterOpen={props.closeHamburgerMenu}
         overlayClassName="modal-overlay"
         shouldCloseOnOverlayClick={true}
         >
-        {props.children}
+        {children}
     </ReactModal>
 
 export default Modal;

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Modal from './../Modal';
+import StoryModal from './StoryModal';
 
-export default connect()(class StoryModalContainer extends Component {
+export default connect(state => ({
+
+}))(class StoryModalContainer extends Component {
     render(){
         return(
-            <Modal />
+            <StoryModal />
         )
     }
 })

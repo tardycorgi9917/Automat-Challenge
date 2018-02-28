@@ -22,7 +22,16 @@ export function getChildren(item){
 }
 
 export function getTopCommenters(story){
-       getCommentsForStory(story); 
+    return dispatch => {
+        return new Promise( (resolve, reject) => {
+            const c = getCommentsForStory(story);
+            const vals = Object.entries(c).sort( (a,b) => b[1] - a[1]).slice(0, 8);
+
+            resolve(vals);
+        }).then(commenters => {
+            console.log(commenters);
+        });
+    }
 }
 
 // really, this is a tree problem,
@@ -36,17 +45,13 @@ async function getCommentsForStory(story){
     });
     while(q.length > 0){
         const item = q.shift();
-        if(item.by in c){
-            c[item.by]++;
-        } else {
-            c[item.by] = 1;
-        }
+        (item.by in c) ? c[item.by]++ : c[item.by] = 1;
         await getChildren(item).then( items => {
             q = q.concat(items);
         });
-
-        console.log(c);
     }
+
+    return c;
 }
 
 const populateItem = id => itemRequests.getItem(id).then( response => response.data );

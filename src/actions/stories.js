@@ -22,16 +22,13 @@ export function getChildren(item){
 }
 
 export function getTopCommenters(story){
-    return dispatch => {
-        return new Promise( (resolve, reject) => {
-            const c = getCommentsForStory(story);
-            const vals = Object.entries(c).sort( (a,b) => b[1] - a[1]).slice(0, 8);
+    // return dispatch => {
 
-            resolve(vals);
-        }).then(commenters => {
-            console.log(commenters);
-        });
-    }
+    // }
+    const c = getCommentsForStory(story);
+    const vals = Object.entries(c).sort( (a,b) => b[1] - a[1]).slice(0, 8);
+
+    return vals;
 }
 
 // really, this is a tree problem,

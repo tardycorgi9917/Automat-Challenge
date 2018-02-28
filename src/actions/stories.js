@@ -22,9 +22,6 @@ export function getChildren(item){
 }
 
 export function getTopCommenters(story){
-    // return dispatch => {
-
-    // }
     const c = getCommentsForStory(story);
     const vals = Object.entries(c).sort( (a,b) => b[1] - a[1]).slice(0, 8);
 

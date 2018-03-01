@@ -1,3 +1,5 @@
+$base-color: #f39c12;
+
 .home-container{
     width: 100%;
     display: flex;
@@ -5,8 +7,15 @@
     justify-content: center;
     align-items: center;
     h2{
-        color: #f39c12;
+        color: $base-color;
         font-weight: bold; 
+    }
+    .loading-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:$base-color;
+        height: 60vh;
     }
 }
 .story-container{

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import StoryCard from './../../components/StoryCard';
 import StoryModal from './../../components/StoryModal';
+import Loading from './../../components/Loading';
 import { connect } from 'react-redux';
 import { getTopStories } from './../../actions/stories';
 import { openStoryModal, setModalStory, getTopCommenters } from './../../actions/storyModal';
@@ -24,9 +25,12 @@ export default connect(state => ({
     }
     renderStories(){
         console.log(this.props.stories);
-        return this.props.stories.map((s, i) =>
+        return this.props.stories.length ? this.props.stories.map((s, i) =>
             <StoryCard key={i} {...s} onSelect={() => this.onStorySelect(s)}/>
-        )
+        ):
+        <div className={"loading-wrap"}>
+            <Loading color={"#f39c12"} type={"spin"}/>
+        </div>
     }
     render(){
         return (

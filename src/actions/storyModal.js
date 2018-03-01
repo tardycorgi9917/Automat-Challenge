@@ -4,7 +4,7 @@ import {
     SET_MODAL_STORY,
     SET_TOP_COMMENTERS
  } from './index';
- import itemRequests, { populateItem } from './../requests/itemRequests';
+ import { populateItem } from './../requests/itemRequests';
 
 
 export function openStoryModal(){
@@ -39,17 +39,9 @@ export function getTopCommenters(story){
 }
 
 function getChildren(item){
-    //console.log(item.kids);
     item.kids = item.kids? item.kids : [];
     return Promise.all(item.kids.map(populateItem)).then( items => items);
 }
-
-// export function getTopCommenters(story){
-//     const c = getCommentsForStory(story);
-//     const vals = Object.entries(c).sort( (a,b) => b[1] - a[1]).slice(0, 10);
-
-//     return vals;
-// }
 
 // really, this is a tree problem,
 // let's go ahead and use BFS and append to a makeshift

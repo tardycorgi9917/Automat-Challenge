@@ -7,6 +7,12 @@
   .home-container h2 {
     color: #f39c12;
     font-weight: bold; }
+  .home-container .loading-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f39c12;
+    height: 60vh; }
 
 .story-container {
   width: 70%; }

@@ -4,9 +4,8 @@ import {
     SET_MODAL_STORY,
     SET_TOP_COMMENTERS,
     GET_COMMENTERS_PROGRESS
- } from './index';
- import { populateItem } from './../requests/itemRequests';
-
+} from './index';
+import { populateItem } from './../requests/itemRequests';
 
 export function openStoryModal(){
     return dispatch => {
@@ -28,12 +27,9 @@ export function setModalStory(story){
 
 export function getTopCommenters(story){
     return dispatch => {
-        return new Promise((resolve, reject) => {
-            Promise.resolve(getCommentsForStory(story, dispatch)).then( c => {
-                const vals = Object.entries(c).sort( (a,b) => b[1] - a[1]).slice(0, 10);
-                resolve(vals);
-            });
-        }).then( commenters => {
+        return Promise.resolve(getCommentsForStory(story, dispatch)).then( c =>
+            Object.entries(c).sort( (a,b) => b[1] - a[1]).slice(0, 10)
+        ).then( commenters => {
             dispatch({type: SET_TOP_COMMENTERS, commenters});
         });
     }

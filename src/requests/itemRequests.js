@@ -3,7 +3,7 @@ import { generateInstance, item } from './config';
 const itemEndPoint = generateInstance(item);
 
 const itemRequests = {
-    getItem: (id) => {
+    getItem: id => {
         return itemEndPoint.get(id + '.json ');
     }
 }

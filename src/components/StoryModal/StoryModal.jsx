@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Modal from './../../components/Modal';
 import Loading from './../../components/Loading';
+import UserRow from './../../components/UserRow';
 import './style.css';
 
 const StoryModal = ({
     isOpen,
-    story: { by, title, score, url, descendants},
+    story: { by, title, score, url, descendants },
     commenters,
     commentersProgress,
     onClose
@@ -15,7 +16,7 @@ const StoryModal = ({
             <h2>{title}</h2>
             <p>{by}</p>
             {commenters.length ? 
-                <div>{commenters.map( (c, i) => <h4>{c}</h4>)}</div>: 
+                <div>{commenters.map( (c, i) => <h3>{c}</h3>)}</div>: 
                 <div className={"loading-wrap"}>
                     {Math.round(commentersProgress*100/descendants)}%
                     <Loading color={"#f39c12"} type={"bars"}/>

@@ -10,3 +10,5 @@ const UserRow = ({
         <p>{id}</p>
         <p>{numComments}</p>
     </div>
+
+export default UserRow;

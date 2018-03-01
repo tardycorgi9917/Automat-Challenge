@@ -1,7 +1,7 @@
-import { SET_STORIES } from './../actions';
+import { SET_STORIES, SET_TOP_COMMENTERS } from './../actions';
 
 const initialState = {
-    stories: []
+    stories: [],
 }
 
 export default (state = initialState, action = {}) => {

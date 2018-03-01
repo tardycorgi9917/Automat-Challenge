@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import StoryCard from './../../components/StoryCard';
 import StoryModal from './../../components/StoryModal';
 import { connect } from 'react-redux';
-import { getTopStories, getTopCommenters } from './../../actions/stories';
-import { openStoryModal, setModalStory } from './../../actions/storyModal';
+import { getTopStories } from './../../actions/stories';
+import { openStoryModal, setModalStory, getTopCommenters } from './../../actions/storyModal';
 import './style.css';
  
 export default connect(state => ({
@@ -20,7 +20,7 @@ export default connect(state => ({
     onStorySelect(story){
         this.props.openStoryModal();
         this.props.setModalStory(story);
-        //this.props,getTopCommenters(story);
+        this.props.getTopCommenters(story);
     }
     renderStories(){
         console.log(this.props.stories);

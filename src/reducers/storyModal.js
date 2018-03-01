@@ -1,4 +1,9 @@
-import { OPEN_STORY_MODAL, CLOSE_STORY_MODAL, SET_MODAL_STORY } from './../actions';
+import { 
+    OPEN_STORY_MODAL, 
+    CLOSE_STORY_MODAL, 
+    SET_MODAL_STORY,
+    SET_TOP_COMMENTERS
+ } from './../actions';
 
 const initialState = {
     commenters: [],
@@ -22,6 +27,11 @@ export default (state = initialState, action = {}) => {
             return {
                 ...state,
                 story: action.story
+            }
+        case SET_TOP_COMMENTERS:
+            return {
+                ...state,
+                commenters: action.commenters,
             }
         default: return state;
     }

@@ -12,6 +12,7 @@ const StoryModal = ({
         <div>{title}</div>
         <div>{by}</div>
         <button className="close-modal" onClick={onClose}>X</button>
+        {commenters.length ? commenters.map( (c, i) => <h4>{c}</h4>) : <h4>Loading</h4> }
     </Modal>
 
 export default StoryModal;

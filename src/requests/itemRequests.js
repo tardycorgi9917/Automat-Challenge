@@ -8,4 +8,6 @@ const itemRequests = {
     }
 }
 
+export const populateItem = id => itemRequests.getItem(id).then( response => response.data );
+
 export default itemRequests;

@@ -47,3 +47,23 @@
 .story-card-container:hover{
     background: darken(white, 10%);
 }
+
+@media (max-width: 762px) {
+    .story-card-container{
+        .story-header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .story-points{
+    
+            }
+            .story-title{
+                opacity: 0.7;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+}

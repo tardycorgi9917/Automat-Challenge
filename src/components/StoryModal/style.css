@@ -8,6 +8,15 @@
   opacity: 0.8;
   text-align: left; }
 
+.story-modal-container .details-wrap {
+  display: flex;
+  justify-content: space-between; }
+
+.story-modal-container .comment-count {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .story-modal-container .close-modal {
   text-decoration: none;
   position: absolute;

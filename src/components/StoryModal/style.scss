@@ -11,6 +11,15 @@ $base-color: #f39c12;
         opacity: 0.8;
         text-align: left;
     }
+    .details-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    .comment-count{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .close-modal{
         text-decoration: none;
         position: absolute;

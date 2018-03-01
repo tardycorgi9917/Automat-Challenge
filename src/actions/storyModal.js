@@ -58,6 +58,7 @@ async function getCommentsForStory(story, dispatch){
         await getChildren(item).then( items => {
             q = q.concat(items);
             count += items.length;
+            console.log(count);
             dispatch({type: GET_COMMENTERS_PROGRESS, count});
         });
     }

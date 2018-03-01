@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Modal from './../../components/Modal';
 import Loading from './../../components/Loading';
 import UserRow from './../../components/UserRow';
-import * as FontAwesome from 'react-icons/lib/fa';
 import './style.css';
 
 const StoryModal = ({

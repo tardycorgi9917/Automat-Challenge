@@ -1,7 +1,15 @@
-.close-modal {
+.story-modal-container p {
+  opacity: 0.8; }
+
+.story-modal-container .close-modal {
   text-decoration: none;
   position: absolute;
   top: 1rem;
   right: 0;
   border: none;
   color: rgba(26, 26, 26, 0.6); }
+
+.story-modal-container .loading-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center; }

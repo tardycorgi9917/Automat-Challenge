@@ -5,8 +5,9 @@ import './style.css';
 
 const StoryModal = ({
     isOpen,
-    story: { by, title, score, url},
+    story: { by, title, score, url, descendants},
     commenters,
+    commentersProgress,
     onClose
 }) => 
     <Modal isOpen={isOpen} handleCloseModal={onClose}>
@@ -16,6 +17,7 @@ const StoryModal = ({
             {commenters.length ? 
                 <div>{commenters.map( (c, i) => <h4>{c}</h4>)}</div>: 
                 <div className={"loading-wrap"}>
+                    {Math.round(commentersProgress*100/descendants)}%
                     <Loading color={"#f39c12"} type={"bars"}/>
                 </div> }
 

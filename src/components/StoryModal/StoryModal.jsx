@@ -15,7 +15,7 @@ const StoryModal = ({
         <div className={"story-modal-container"}>
             <h2>{title}</h2>
             <p>by {by}</p>
-            <a href={url}>{url}</a>
+            <a href={url} target="_blank">{url}</a>
             {commenters.length ? 
                 <div>
                     <h3>Top Commenters</h3>

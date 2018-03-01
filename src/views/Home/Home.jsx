@@ -24,7 +24,6 @@ export default connect(state => ({
         this.props.getTopCommenters(story);
     }
     renderStories(){
-        console.log(this.props.stories);
         return this.props.stories.length ? this.props.stories.map((s, i) =>
             <StoryCard key={i} {...s} onSelect={() => this.onStorySelect(s)}/>
         ):

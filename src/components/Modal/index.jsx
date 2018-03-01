@@ -4,13 +4,16 @@ import './style.css';
 
 const Modal = ({
     isOpen,
-    children
+    children,
+    handleCloseModal
 }) => 
     <ReactModal 
         isOpen={isOpen}
         className="modal"
         overlayClassName="modal-overlay"
         shouldCloseOnOverlayClick={true}
+        onRequestClose={handleCloseModal}
+        ariaHideApp={false}
         >
         {children}
     </ReactModal>

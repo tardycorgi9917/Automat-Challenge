@@ -8,7 +8,7 @@ const StoryModal = ({
     commenters,
     onClose
 }) => 
-    <Modal isOpen={isOpen}>
+    <Modal isOpen={isOpen} handleCloseModal={onClose}>
         <div>{title}</div>
         <div>{by}</div>
         <button className="close-modal" onClick={onClose}>X</button>

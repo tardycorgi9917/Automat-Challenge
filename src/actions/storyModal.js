@@ -50,6 +50,7 @@ async function getCommentsForStory(story, dispatch){
     await getChildren(story).then(items => {
         q = q.concat(items);
         count += items.length;
+        dispatch({type: GET_COMMENTERS_PROGRESS, count});
     });
     while(q.length > 0){
         const item = q.shift();

@@ -7,8 +7,8 @@ const UserRow = ({
     numComments,
 }) =>
     <div className={"user-row-container"}>
-        <p>{id}</p>
-        <p>{numComments}</p>
+        <p className={"id-text"}>{id}</p>
+        <p className={"num-text"}><span>{numComments}</span> comments</p>
     </div>
 
 export default UserRow;

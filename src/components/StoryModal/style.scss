@@ -1,20 +1,29 @@
-.story-modal-container{
-    h2{
+$base-color: #f39c12;
 
+.story-modal-container{
+    padding: 3rem;
+    a{
+        color: $base-color;
+    }
+    h2{
+        text-align: center;
     }
     p{
         opacity: 0.8;
+        text-align: left;
     }
     .close-modal{
         text-decoration: none;
         position: absolute;
-        top: 1rem;
+        top: 2rem;
         right: 0;
         border: none;
         color: rgba(26, 26, 26, 0.6);
+        font-size: 2rem;
     }
 
     .loading-wrap{
+        margin-top: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -14,9 +14,13 @@ const StoryModal = ({
     <Modal isOpen={isOpen} handleCloseModal={onClose}>
         <div className={"story-modal-container"}>
             <h2>{title}</h2>
-            <p>{by}</p>
+            <p>by {by}</p>
+            <a href={url}>{url}</a>
             {commenters.length ? 
-                <div>{commenters.map( (c, i) => <h3>{c}</h3>)}</div>: 
+                <div>
+                    <h3>Top Commenters</h3>
+                    {commenters.map( (c, i) => <UserRow id={c[0]} numComments={c[1]}/>)}
+                </div>: 
                 <div className={"loading-wrap"}>
                     {Math.round(commentersProgress*100/descendants)}%
                     <Loading color={"#f39c12"} type={"bars"}/>

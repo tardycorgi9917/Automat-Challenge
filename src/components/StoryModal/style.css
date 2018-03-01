@@ -1,16 +1,23 @@
-.story-modal-container p {
-  opacity: 0.8; }
-
-.story-modal-container .close-modal {
-  text-decoration: none;
-  position: absolute;
-  top: 1rem;
-  right: 0;
-  border: none;
-  color: rgba(26, 26, 26, 0.6); }
-
-.story-modal-container .loading-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+.story-modal-container {
+  padding: 3rem; }
+  .story-modal-container a {
+    color: #f39c12; }
+  .story-modal-container h2 {
+    text-align: center; }
+  .story-modal-container p {
+    opacity: 0.8;
+    text-align: left; }
+  .story-modal-container .close-modal {
+    text-decoration: none;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    border: none;
+    color: rgba(26, 26, 26, 0.6);
+    font-size: 2rem; }
+  .story-modal-container .loading-wrap {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }

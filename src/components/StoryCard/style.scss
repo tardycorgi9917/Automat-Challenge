@@ -46,6 +46,7 @@
 
 .story-card-container:hover{
     background: darken(white, 10%);
+    cursor: pointer;
 }
 
 @media (max-width: 762px) {

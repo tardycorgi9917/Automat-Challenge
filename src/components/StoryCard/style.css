@@ -36,7 +36,8 @@
       font-size: 1.2rem; }
 
 .story-card-container:hover {
-  background: #e6e6e6; }
+  background: #e6e6e6;
+  cursor: pointer; }
 
 @media (max-width: 762px) {
   .story-card-container .story-header {

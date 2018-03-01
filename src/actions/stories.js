@@ -9,7 +9,6 @@ export function getTopStories(){
         return storiesRequests.getTopStories().then( response => {
             const storyIDs = response.data.slice(0, num_stories);
             Promise.all(storyIDs.map(populateItem)).then( stories => {
-                console.log(dispatch);
                 dispatch({type: SET_STORIES, stories});
             });
         }).catch( err => {console.log(err)})

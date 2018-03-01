@@ -27,7 +27,11 @@ export function setModalStory(story){
 
 export function getTopCommenters(story){
     return dispatch => {
-        dispatch({type: SET_TOP_COMMENTERS, commenters: ['Mark Cuban', 'Dirk Nowitzki']});
+        return new Promise( (resolve, reject) => {
+            resolve(['Mark Cuban', 'Dirk Nowitzki']);
+        }).then( commenters => {
+            dispatch({type: SET_TOP_COMMENTERS, commenters});
+        });
     }
 }
 

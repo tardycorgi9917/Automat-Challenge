@@ -6,4 +6,4 @@ To install, simply run
 
 and then,
 
-````npm start ````
+````yarn start ````
